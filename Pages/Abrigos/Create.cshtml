@@ -10,49 +10,52 @@
 <div class="row">
     <div class="col-md-6">
         <form method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <input type="hidden" asp-for="Abrigo.Id" />
 
-            <div class="form-group">
-                <label asp-for="Abrigo.Nome"></label>
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.Nome" class="control-label"></label>
                 <input asp-for="Abrigo.Nome" class="form-control" />
                 <span asp-validation-for="Abrigo.Nome" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.Capacidade"></label>
-                <input asp-for="Abrigo.Capacidade" class="form-control" />
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.Capacidade" class="control-label"></label>
+                <input asp-for="Abrigo.Capacidade" class="form-control" type="number" min="1" />
                 <span asp-validation-for="Abrigo.Capacidade" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.RecursosDisponiveis"></label>
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.RecursosDisponiveis" class="control-label"></label>
                 <input asp-for="Abrigo.RecursosDisponiveis" class="form-control" />
                 <span asp-validation-for="Abrigo.RecursosDisponiveis" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.TipoAtendimento"></label>
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.TipoAtendimento" class="control-label"></label>
                 <input asp-for="Abrigo.TipoAtendimento" class="form-control" />
                 <span asp-validation-for="Abrigo.TipoAtendimento" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.Latitude"></label>
-                <input asp-for="Abrigo.Latitude" class="form-control" />
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.Latitude" class="control-label"></label>
+                <input asp-for="Abrigo.Latitude" class="form-control" type="number" step="any" />
                 <span asp-validation-for="Abrigo.Latitude" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.Longitude"></label>
-                <input asp-for="Abrigo.Longitude" class="form-control" />
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.Longitude" class="control-label"></label>
+                <input asp-for="Abrigo.Longitude" class="form-control" type="number" step="any" />
                 <span asp-validation-for="Abrigo.Longitude" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="Abrigo.CidadeId"></label>
-                <select asp-for="Abrigo.CidadeId" asp-items="@(ViewData["CidadeId"] as SelectList)" class="form-control"></select>
+            <div class="form-group mb-3">
+                <label asp-for="Abrigo.CidadeId" class="control-label"></label>
+                <select asp-for="Abrigo.CidadeId" asp-items="@(ViewData["CidadeId"] as SelectList)"
+                    class="form-control">
+                    <option value="">-- Selecione uma cidade --</option>
+                </select>
                 <span asp-validation-for="Abrigo.CidadeId" class="text-danger"></span>
             </div>
 
