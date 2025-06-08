@@ -1,0 +1,36 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# Database
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# Backup & temporary files
+*.tmp
+*.bak
+*.old
+*.orig
+
+# Others
+*.dbmdl
+*.db
+*.sqlite
+
+# Rider
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db

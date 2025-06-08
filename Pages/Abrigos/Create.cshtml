@@ -1,0 +1,71 @@
+﻿@page
+@model Firewatch.Abrigos.Pages.Abrigos.CreateModel
+
+@{
+    ViewData["Title"] = "Cadastrar Abrigo";
+}
+
+<h1>Cadastrar Abrigo</h1>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Abrigo.Id" />
+
+            <div class="form-group">
+                <label asp-for="Abrigo.Nome"></label>
+                <input asp-for="Abrigo.Nome" class="form-control" />
+                <span asp-validation-for="Abrigo.Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.Capacidade"></label>
+                <input asp-for="Abrigo.Capacidade" class="form-control" />
+                <span asp-validation-for="Abrigo.Capacidade" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.RecursosDisponiveis"></label>
+                <input asp-for="Abrigo.RecursosDisponiveis" class="form-control" />
+                <span asp-validation-for="Abrigo.RecursosDisponiveis" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.TipoAtendimento"></label>
+                <input asp-for="Abrigo.TipoAtendimento" class="form-control" />
+                <span asp-validation-for="Abrigo.TipoAtendimento" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.Latitude"></label>
+                <input asp-for="Abrigo.Latitude" class="form-control" />
+                <span asp-validation-for="Abrigo.Latitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.Longitude"></label>
+                <input asp-for="Abrigo.Longitude" class="form-control" />
+                <span asp-validation-for="Abrigo.Longitude" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Abrigo.CidadeId"></label>
+                <select asp-for="Abrigo.CidadeId" asp-items="@(ViewData["CidadeId"] as SelectList)" class="form-control"></select>
+                <span asp-validation-for="Abrigo.CidadeId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

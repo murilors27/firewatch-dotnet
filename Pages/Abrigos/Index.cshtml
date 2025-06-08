@@ -1,0 +1,46 @@
+﻿@page
+@model Firewatch.Abrigos.Pages.Abrigos.IndexModel
+
+@{
+    ViewData["Title"] = "Lista de Abrigos";
+}
+
+<h1>Lista de Abrigos</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary">Novo Abrigo</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().Capacidade)</th>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().RecursosDisponiveis)</th>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().TipoAtendimento)</th>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().Latitude)</th>
+            <th>@Html.DisplayNameFor(model => model.Abrigo.First().Longitude)</th>
+            <th>Cidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Abrigo)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Capacidade</td>
+                <td>@item.RecursosDisponiveis</td>
+                <td>@item.TipoAtendimento</td>
+                <td>@item.Latitude</td>
+                <td>@item.Longitude</td>
+                <td>@item.Cidade?.Nome</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

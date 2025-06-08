@@ -1,0 +1,28 @@
+﻿@page
+@model Firewatch.Abrigos.Pages.Abrigos.DeleteModel
+
+@{
+    ViewData["Title"] = "Excluir Abrigo";
+}
+
+<h1>Confirmar Exclusão</h1>
+<h3>Você tem certeza que deseja excluir este abrigo?</h3>
+<div>
+    <h4>@Model.Abrigo.Nome</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">Cidade</dt>
+        <dd class="col-sm-9">@Model.Abrigo.Cidade?.Nome</dd>
+
+        <dt class="col-sm-3">Capacidade</dt>
+        <dd class="col-sm-9">@Model.Abrigo.Capacidade</dd>
+
+        <dt class="col-sm-3">Tipo</dt>
+        <dd class="col-sm-9">@Model.Abrigo.TipoAtendimento</dd>
+    </dl>
+
+    <form method="post">
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
