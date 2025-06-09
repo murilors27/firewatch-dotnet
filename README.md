@@ -102,32 +102,27 @@ http://localhost:5162/swagger
 
 ### GET /api/abrigos
 
-[
-  {
-    "id": 1,
-    "nome": "Abrigo Central",
-    "capacidade": 200,
-    "recursosDisponiveis": "Água, comida",
-    "tipoAtendimento": "24h",
-    "latitude": "-23.56",
-    "longitude": "-46.63",
-    "cidade": {
-      "id": 1,
-      "nome": "São Paulo"
-    }
-  }
-]
+{  
+&nbsp;&nbsp;"id": 1,  
+&nbsp;&nbsp;"nome": "Abrigo Central",  
+&nbsp;&nbsp;"capacidade": 200,  
+&nbsp;&nbsp;"recursosDisponiveis": "Água, comida",
+&nbsp;&nbsp;"tipoAtendimento": "24h",  
+&nbsp;&nbsp;"latitude": "-23.56",    
+&nbsp;&nbsp;"longitude": "46.63",
+&nbsp;&nbsp;"cidade": -46.6388,    
+&nbsp;&nbsp;"longitude": "2025-06-06",
+}
 
 ---
 
-## 📷 Prints
+## 👥 Equipe
 
-- Página de cadastro
-- Listagem de abrigos
-- Swagger em execução
+| Nome                                | RM       | GitHub                                |
+|-------------------------------------|----------|----------------------------------------|
+| Murilo Ribeiro Santos               | RM555109 | [@murilors27](https://github.com/murilors27) |
+| Thiago Garcia Tonato                | RM99404  | [@thiago-tonato](https://github.com/thiago-tonato) |
+| Ian Madeira Gonçalves da Silva      | RM555502 | [@IanMadeira](https://github.com/IanMadeira) |
 
----
-
-## 🧾 Créditos
-
-Desenvolvido por Murilo Ribeiro Santos – Projeto acadêmico para a disciplina de Desenvolvimento Web com .NET.
+**Curso**: Análise e Desenvolvimento de Sistemas  
+**Instituição**: FIAP – Faculdade de Informática e Administração Paulista
