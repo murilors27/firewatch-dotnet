@@ -30,7 +30,6 @@ Cidade (1) -------- (N) Abrigo
 - Entity Framework Core
 - PostgreSQL
 - Bootstrap 5 (via TagHelpers)
-- Swagger (com API auxiliar)
 - Visual Studio 2022
 
 ---
@@ -64,10 +63,6 @@ Acesse o sistema em:
 
 http://localhost:5162
 
-Acesse o Swagger (caso implementado):
-
-http://localhost:5162/swagger
-
 ---
 
 ## ✅ Funcionalidades
@@ -77,7 +72,6 @@ http://localhost:5162/swagger
 - Validações com DataAnnotations
 - Visualização dinâmica em tabela HTML
 - Navegação amigável com Razor Pages
-- Swagger documentando API auxiliar
 
 ---
 
