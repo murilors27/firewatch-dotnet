@@ -39,7 +39,7 @@ Cidade (1) -------- (N) Abrigo
 
 ### 1. Clone o repositório
 
-git clone https://github.com/seu-usuario/firewatch-abrigos.git  
+git clone https://github.com/murilors27/firewatch-dotnet.git  
 cd firewatch-abrigos
 
 ### 2. Configure o banco PostgreSQL
@@ -95,24 +95,6 @@ http://localhost:5162/swagger
    - Longitude: -46.63
    - Cidade: São Paulo
 3. Clique em "Cadastrar"
-
----
-
-## 🧪 Swagger (exemplo)
-
-### GET /api/abrigos
-
-{  
-&nbsp;&nbsp;"id": 1,  
-&nbsp;&nbsp;"nome": "Abrigo Central",  
-&nbsp;&nbsp;"capacidade": 200,  
-&nbsp;&nbsp;"recursosDisponiveis": "Água, comida",
-&nbsp;&nbsp;"tipoAtendimento": "24h",  
-&nbsp;&nbsp;"latitude": "-23.56",    
-&nbsp;&nbsp;"longitude": "46.63",
-&nbsp;&nbsp;"cidade": -46.6388,    
-&nbsp;&nbsp;"longitude": "2025-06-06",
-}
 
 ---
 
